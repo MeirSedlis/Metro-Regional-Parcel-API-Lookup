@@ -40,9 +40,12 @@ export default function Results() {
                 {streetType + " "}
                 {stPosDir && stPosDir + " "}
                 {stPosMod && stPosMod} <br />
-                {city},{" " + stateCode}{" " + zip} <br />
+                {city},{" " + stateCode}
+                {" " + zip} <br />
                 <span className="indented">Owner: {owner}</span> <br />
-                <span className="indented">Estimated Property Value: ${totalValue}</span>
+                <span className="indented">
+                  Estimated Property Value: ${totalValue}
+                </span>
               </li>
             );
           })}
