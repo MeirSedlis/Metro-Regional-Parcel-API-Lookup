@@ -9,7 +9,7 @@ function* fetchByCountyPin(action){
             baseURL: `https://arcgis.metc.state.mn.us/server/rest/services/GISLibrary/VWParcelsPoints/FeatureServer/0/query?where=COUNTY_PIN='${PIN}'&outFields=*&f=pjson`,
         })
         yield put ({
-            type: 'lookup.setResults',
+            type: 'SET_RESULTS',
             payload: response.data.features
         })
     } catch(error){

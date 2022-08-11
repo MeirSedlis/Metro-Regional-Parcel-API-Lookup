@@ -24,10 +24,12 @@ h5,
   font-size: 2.125rem;
 }
 
-p {
+p, li {
   font-size: 2rem;
   line-height: 1.6;
 }
+
+
 
 .large-label {
 font-size: 2rem;
@@ -45,4 +47,8 @@ margin-left: 2rem;
   font-size: 2rem;
   display: block;
   margin: 2rem;
+}
+
+.indented{
+  padding-left: 2.5rem;
 }

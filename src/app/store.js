@@ -1,7 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import counterReducer from "../features/counter/counterSlice";
-import lookupReducer from "../features/lookup/lookupSlice";
+import lookupReducer from "../features/lookup/lookupReducer";
 import lookupSaga from "../features/lookup/lookupSaga";
 import logger from "redux-logger"
 
@@ -10,7 +9,6 @@ const middleware = [sagaMiddleware, logger];
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     lookup: lookupReducer,
   },
   middleware: (getDefaultMiddleware) =>

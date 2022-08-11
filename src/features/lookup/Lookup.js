@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { lookupByCountyPIN } from "./lookupSlice";
+import { useDispatch } from "react-redux";
+
+import Results from "./Results.js";
 
 export default function Lookup() {
-  const parcel = useSelector(store=>store.lookupReducer)
+  
   const dispatch = useDispatch();
   const [PIN, setPIN] = useState(0);
+ 
 
   return (
     <div>
@@ -31,7 +33,7 @@ export default function Lookup() {
       </div>
       <div>
         <h2>Results</h2>
-        {parcel && <p>{JSON.stringify(parcel)}</p>}
+        <Results/>
       </div>
     </div>
   );
