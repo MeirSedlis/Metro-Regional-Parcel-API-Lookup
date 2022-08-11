@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { lookupByCountyPIN } from "./lookupSlice";
 
 export default function Lookup() {
-  // get state from store
+  const parcel = useSelector(store=>store.lookupReducer)
   const dispatch = useDispatch();
   const [PIN, setPIN] = useState(0);
 
@@ -24,13 +24,14 @@ export default function Lookup() {
         <button
         className="large-button"
           aria-label="Search by PIN"
-          onClick={() => dispatch(lookupByCountyPIN(PIN))}
+          onClick={() => dispatch({type: 'FETCH_BY_COUNTY_PIN', payload: PIN})}
         >
           Search by PIN
         </button>
       </div>
       <div>
         <h2>Results</h2>
+        {parcel && <p>{JSON.stringify(parcel)}</p>}
       </div>
     </div>
   );
