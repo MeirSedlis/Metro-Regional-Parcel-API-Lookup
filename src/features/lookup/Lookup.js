@@ -8,6 +8,7 @@ export default function Lookup() {
   const [PIN, setPIN] = useState(0);
   const [aNumber, setANumber] = useState(0);
   const [street, setStreet] = useState("");
+  console.log(aNumber, street)
 
   return (
     <div>
@@ -37,7 +38,7 @@ export default function Lookup() {
           className="large-button"
           aria-label="Search by PIN"
           onClick={() =>
-            dispatch({ type: "FETCH_BY_ADDRESS", payload: (aNumber, street) })
+            dispatch({ type: "FETCH_BY_ADDRESS", payload: {street, aNumber} })
           }
         >
           Search by Address

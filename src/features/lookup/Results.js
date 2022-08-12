@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Results() {
   const results = useSelector((store) => store.lookup);
-  console.log(results);
   return (
     <div>
       <ul>
