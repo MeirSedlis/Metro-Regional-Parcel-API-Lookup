@@ -18,7 +18,7 @@ function* fetchByCountyPin(action){
 }
 
 
-// I got real close with this. The 
+// This is a very finicky endpoint. Many searches will fail.
 function* fetchByAddress(action){
     const aNumber = Number(action.payload.aNumber);
     const street = action.payload.street;
